@@ -44,16 +44,28 @@ Use this tool to calculate risk, or something along those lines.<br><br>
 <br><b>Your Risk: </b> <em id= "output"></em>
 
 <script type="text/javascript">
+	/** Function: get_value
+			Finds what radio button of a question is selected and returns the value
+			that selection represents. The parameter "name" is used to determine
+			the name given in the html code above (pri, q1, q2, etc.). The for loop
+			iterates through each answer of the radio button question, and stops 
+			looping once a selected answer is reached.
+	**/
 	function get_value(name) {
 		var radios = document.getElementsByName(name);
 
 		for (var i = 0, length = radios.length; i < length; i++) { 
     		if (radios[i].checked) {
 				return radios[i].value;
-				//break;
     		}
 		}
 	}
+	/** Function: calc_risk
+			Finds the value that each radio button question represents and saves those
+			values into variables. Then, this function will return a string based on
+			sum of the values of what each question represented. If the user didn't 
+			answer all the questions, the function will tell them to try again.
+	**/
 	function calc_risk() {
 		var priority = Number(get_value('pri'));
 		var q1 = Number(get_value('q1'));
@@ -63,30 +75,39 @@ Use this tool to calculate risk, or something along those lines.<br><br>
 		var q5 = Number(get_value('q5'));
 		var q6 = Number(get_value('q6'));
 		var sum = q1 + q2 + q3 + q4 + q5 + q6;
+
+		var low = "The risk of this change is standard.";
+		var med = "The risk of this change ranges between standard and significant.";
+		var high = "The risk of this change is significant.";
 		
 		if (isNaN(sum) || isNaN(priority)) {
 			return "Please make sure all questions are answered before calculating risk.";
 		
 		} else if (sum <= 2) {
-			return "The risk of this change is standard.";
+			return low;
 
-		} else if ((sum == 3) || (sum == 4)) {
+		} else if (sum <= 4) {
 			if (priority == 1) {
-				return "The risk of this change is significant.";	
+				return high;	
 			
 			} else if (priority == 2) {
-				return "The risk of this change ranges between standard and significant.";
+				return med;
 
-			} else return "The risk of this change is standard.";
+			} else {
+				return low;}
 
 		} else {
 			if (priority <= 2) {
-				return "The risk of this change is significant.";
+				return high;
 			
-			} else return "The risk of this change is standard.";
+			} else {
+				return low;}
 		}
 	}
-
+	/** Function: output_result
+			This function is used to call calc_risk, and displays the return value in
+			the html code as text.
+	**/
 	function output_result() {
 		document.getElementById("output").innerHTML = calc_risk();
 	}
