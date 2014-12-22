@@ -2,46 +2,70 @@
 <html>
 <body>
 
-<form action="">
+<!-- <form action=""> -->
 
 Use this tool to calculate risk, or something along those lines.<br><br>
 
-<big><b>Priority of Service</b></big><br>
-	<input type="radio" name="pri" value="1"> Priority 1 - Crosses organizational boundaries, serving the business functionality of many units. Is critical to the ability of the University to meet its business and regulatory obligations, support the delivery of education, or administer research. Has strategic value to the campus such that encouragement of widespread use is desirable. <br><br>
+<h3>Priority of Service</h3>
+	<input type="radio" name="pri" id="p1" value="1" required>
+	<label for="p1">Priority 1</label>
+	- Crosses organizational boundaries, serving the business functionality of many units. Is critical to the ability of the University to meet its business and regulatory obligations, support the delivery of education, or administer research. Has strategic value to the campus such that encouragement of widespread use is desirable. <br><br>
 	
-	<input type="radio" name="pri" value="2"> Priority 2 - The system is a feeder to Priority 1 systems; or is a system that does not cross organizational boundaries, but is still critical to the ability of the University to meet its business and regulatory obligations. <br><br>
+	<input type="radio" name="pri" id="p2" value="2" required>
+	<label for="p2">Priority 2</label> 
+	- The system is a feeder to Priority 1 systems; or is a system that does not cross organizational boundaries, but is still critical to the ability of the University to meet its business and regulatory obligations. <br><br>
 	
-	<input type="radio" name="pri" value="3"> Priority 3 - Any departmental system that supports the internal operations of any department or departmental function and does not cross organizational boundaries. <br>
+	<input type="radio" name="pri" id="p3" value="3" required>
+	<label for="p3">Priority 3</label> 
+	- Any departmental system that supports the internal operations of any department or departmental function and does not cross organizational boundaries. <br>
 
-<br><big><b>Assurance Calculation</b></big><br>
+<h3>Assurance Calculation</h3>
 	Have we done this change before?<br>
-		<input type="radio" name="q1" value="1"> Yes<br>
-		<input type="radio" name="q1" value="0"> No<br>
+		<input type="radio" name="q1" id="q1y" value="1" required>
+		<label for="q1y"> Yes</label><br>
+		
+		<input type="radio" name="q1" id="q1n" value="0" required>
+		<label for="q1n"> No</label><br>
 
 	<br>Is the change simple to make?<br>
-		<input type="radio" name="q2" value="1"> Yes<br>
-		<input type="radio" name="q2" value="0"> No<br>
+		<input type="radio" name="q2" id="q2y" value="1" required>
+		<label for="q2y"> Yes</label><br>
+		
+		<input type="radio" name="q2" id="q2n" value="0" required>
+		<label for="q2n"> No</label><br>
 
 	<br>Do we have a clear understanding of everything the change will do?<br>
-		<input type="radio" name="q3" value="1"> Yes<br>
-		<input type="radio" name="q3" value="0"> No<br>
+		<input type="radio" name="q3" id="q3y" value="1" required>
+		<label for="q3y"> Yes</label><br>
+		
+		<input type="radio" name="q3" id="q3n" value="0" required>
+		<label for="q3n"> No</label><br>
 
-<br><big><b>Impact Calculation</b></big><br>
+<h3>Impact Calculation</h3>
 	Will this change be noticeable to customers?<br>
-		<input type="radio" name="q4" value="1"> Yes<br>
-		<input type="radio" name="q4" value="0"> No<br>
+		<input type="radio" name="q4" id="q4y" value="1" required>
+		<label for="q4y"> Yes</label><br>
+
+		<input type="radio" name="q4" id="q4n" value="0" required>
+		<label for="q4n"> No</label><br>
 
 	<br>Could this change impact other services?<br>
-		<input type="radio" name="q5" value="1"> Yes<br>
-		<input type="radio" name="q5" value="0"> No<br>
+		<input type="radio" name="q5" id="q5y" value="1" required>
+		<label for="q5y"> Yes</label><br>
+
+		<input type="radio" name="q5" id="q5n" value="0" required>
+		<label for="q5n"> No</label><br>
 
 	<br>Could this change result in an extended service interruption if it goes badly?<br>
-		<input type="radio" name="q6" value="1"> Yes<br>
-		<input type="radio" name="q6" value="0"> No <br>
+		<input type="radio" name="q6" id="q6y" value="1" required>
+		<label for="q6y"> Yes</label><br>
+
+		<input type="radio" name="q6" id="q6n" value="0" required>
+		<label for="q6n"> No</label><br><br>
 </form>
 
 <button onclick="output_result()">Calculate Risk</button>
-<br><b>Your Risk: </b> <em id= "output"></em>
+<!-- Your Risk: --> <strong id= "output"></strong>
 
 <script type="text/javascript">
 	/** Function: get_value
@@ -114,7 +138,9 @@ Use this tool to calculate risk, or something along those lines.<br><br>
 
 </script>
 
-
+<noscript>This page requires Javascript. Please enable Javascript or calculate your risk
+	manually using <a href='http://is.oregonstate.edu/files/projects/change-management-policy.pdf' target="_blank">
+	this PDF.</a></noscript>
 
 </body>
 </html>
