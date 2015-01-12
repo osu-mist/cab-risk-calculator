@@ -1,146 +1,177 @@
 <!DOCTYPE html>
 <html>
 <body>
+<div class="riskcalculator">
 
-<!-- <form action=""> -->
+<form action="#">
 
-Use this tool to calculate risk, or something along those lines.<br><br>
+<noscript>This page requires Javascript. Please enable Javascript or calculate your risk
+    manually using <a href="http://is.oregonstate.edu/files/projects/change-management-policy.pdf" target="_blank">
+    this PDF.</a><p></noscript>
+
+Use this tool to calculate risk, or something along those lines.<p>
 
 <h3>Priority of Service</h3>
-	<input type="radio" name="pri" id="p1" value="1" required>
-	<label for="p1">Priority 1</label>
-	- Crosses organizational boundaries, serving the business functionality of many units. Is critical to the ability of the University to meet its business and regulatory obligations, support the delivery of education, or administer research. Has strategic value to the campus such that encouragement of widespread use is desirable. <br><br>
-	
-	<input type="radio" name="pri" id="p2" value="2" required>
-	<label for="p2">Priority 2</label> 
-	- The system is a feeder to Priority 1 systems; or is a system that does not cross organizational boundaries, but is still critical to the ability of the University to meet its business and regulatory obligations. <br><br>
-	
-	<input type="radio" name="pri" id="p3" value="3" required>
-	<label for="p3">Priority 3</label> 
-	- Any departmental system that supports the internal operations of any department or departmental function and does not cross organizational boundaries. <br>
+    <div class="priority">
+        <input type="radio" name="pri" id="p1" value="1" required>
+        <label for="p1">Priority 1</label>
+        - Crosses organizational boundaries, serving the business functionality of many units. Is critical to the ability of the University to meet its business and regulatory obligations, support the delivery of education, or administer research. Has strategic value to the campus such that encouragement of widespread use is desirable. <p>
+    </div>    
+    
+    <div class="priority">
+        <input type="radio" name="pri" id="p2" value="2" required>
+        <label for="p2">Priority 2</label> 
+        - The system is a feeder to Priority 1 systems; or is a system that does not cross organizational boundaries, but is still critical to the ability of the University to meet its business and regulatory obligations. <p>
+    </div>    
+    
+    <div class="priority">
+        <input type="radio" name="pri" id="p3" value="3" required>
+        <label for="p3">Priority 3</label> 
+        - Any departmental system that supports the internal operations of any department or departmental function and does not cross organizational boundaries. <p>
+    </div>
 
 <h3>Assurance Calculation</h3>
-	Have we done this change before?<br>
-		<input type="radio" name="q1" id="q1y" value="1" required>
-		<label for="q1y"> Yes</label><br>
-		
-		<input type="radio" name="q1" id="q1n" value="0" required>
-		<label for="q1n"> No</label><br>
+    <div class="question"><h5>
+        Have we done this change before?</h5><p>
+            <input type="radio" name="q1" id="q1y" value="1" required>
+            <label for="q1y"> Yes</label><br>
+            
+            <input type="radio" name="q1" id="q1n" value="0" required>
+            <label for="q1n"> No</label><br>
+    </div>
 
-	<br>Is the change simple to make?<br>
-		<input type="radio" name="q2" id="q2y" value="1" required>
-		<label for="q2y"> Yes</label><br>
-		
-		<input type="radio" name="q2" id="q2n" value="0" required>
-		<label for="q2n"> No</label><br>
-
-	<br>Do we have a clear understanding of everything the change will do?<br>
-		<input type="radio" name="q3" id="q3y" value="1" required>
-		<label for="q3y"> Yes</label><br>
-		
-		<input type="radio" name="q3" id="q3n" value="0" required>
-		<label for="q3n"> No</label><br>
+    <div class="question">
+        <p><h5>Is the change simple to make?</h5><p>
+            <input type="radio" name="q2" id="q2y" value="1" required>
+            <label for="q2y"> Yes</label><br>
+            
+            <input type="radio" name="q2" id="q2n" value="0" required>
+            <label for="q2n"> No</label><br>
+    </div>
+    
+    <div class="question">
+        <p><h5>Do we have a clear understanding of everything the change will do?</h5><p>
+            <input type="radio" name="q3" id="q3y" value="1" required>
+            <label for="q3y"> Yes</label><br>
+            
+            <input type="radio" name="q3" id="q3n" value="0" required>
+            <label for="q3n"> No</label><br>
+    </div>        
 
 <h3>Impact Calculation</h3>
-	Will this change be noticeable to customers?<br>
-		<input type="radio" name="q4" id="q4y" value="1" required>
-		<label for="q4y"> Yes</label><br>
+    
+    <div class="question">
+        <h5>Will this change be noticeable to customers?</h5><p>
+            <input type="radio" name="q4" id="q4y" value="1" required>
+            <label for="q4y"> Yes</label><br>
 
-		<input type="radio" name="q4" id="q4n" value="0" required>
-		<label for="q4n"> No</label><br>
+            <input type="radio" name="q4" id="q4n" value="0" required>
+            <label for="q4n"> No</label><br>
+    </div>
 
-	<br>Could this change impact other services?<br>
-		<input type="radio" name="q5" id="q5y" value="1" required>
-		<label for="q5y"> Yes</label><br>
+    <div class="question">
+        <p><h5>Could this change impact other services?</h5><p>
+            <input type="radio" name="q5" id="q5y" value="1" required>
+            <label for="q5y"> Yes</label><br>
 
-		<input type="radio" name="q5" id="q5n" value="0" required>
-		<label for="q5n"> No</label><br>
+            <input type="radio" name="q5" id="q5n" value="0" required>
+            <label for="q5n"> No</label><br>
+    </div>
 
-	<br>Could this change result in an extended service interruption if it goes badly?<br>
-		<input type="radio" name="q6" id="q6y" value="1" required>
-		<label for="q6y"> Yes</label><br>
+    <div class="question">
+        <p><h5>Could this change result in an extended service interruption if it goes badly?</h5><p>
+            <input type="radio" name="q6" id="q6y" value="1" required>
+            <label for="q6y"> Yes</label><br>
 
-		<input type="radio" name="q6" id="q6n" value="0" required>
-		<label for="q6n"> No</label><br><br>
+            <input type="radio" name="q6" id="q6n" value="0" required>
+            <label for="q6n"> No</label><p>
+    </div>
+
 </form>
 
 <button onclick="output_result()">Calculate Risk</button>
-<!-- Your Risk: --> <strong id= "output"></strong>
+<div class="calcoutput"><h4 id= "output"></h4></div>
 
 <script type="text/javascript">
-	/** Function: get_value
-			Finds what radio button of a question is selected and returns the value
-			that selection represents. The parameter "name" is used to determine
-			the name given in the html code above (pri, q1, q2, etc.). The for loop
-			iterates through each answer of the radio button question, and stops 
-			looping once a selected answer is reached.
-	**/
-	function get_value(name) {
-		var radios = document.getElementsByName(name);
+    /** Function: get_value
+            Finds what radio button of a question is selected and returns the value
+            that selection represents. The parameter "name" is used to determine
+            the name given in the html code above (pri, q1, q2, etc.). The for loop
+            iterates through each answer of the radio button question, and stops 
+            looping once a selected answer is reached.
+    **/
+    function get_value(name) {
+        var radios = document.getElementsByName(name);
 
-		for (var i = 0, length = radios.length; i < length; i++) { 
-    		if (radios[i].checked) {
-				return radios[i].value;
-    		}
-		}
-	}
-	/** Function: calc_risk
-			Finds the value that each radio button question represents and saves those
-			values into variables. Then, this function will return a string based on
-			sum of the values of what each question represented. If the user didn't 
-			answer all the questions, the function will tell them to try again.
-	**/
-	function calc_risk() {
-		var priority = Number(get_value('pri'));
-		var q1 = Number(get_value('q1'));
-		var q2 = Number(get_value('q2'));
-		var q3 = Number(get_value('q3'));
-		var q4 = Number(get_value('q4'));
-		var q5 = Number(get_value('q5'));
-		var q6 = Number(get_value('q6'));
-		var sum = q1 + q2 + q3 + q4 + q5 + q6;
+        for (var i = 0, length = radios.length; i < length; i++) { 
+            if (radios[i].checked) {
+                return radios[i].value;
+            }
+        }
+    }
+    /** Function: calc_risk
+            Finds the value that each radio button question represents and saves those
+            values into variables. Then, this function will return a string based on
+            sum of the values of what each question represented. If the user didn't 
+            answer all the questions, the function will tell them to try again.
+    **/
+    function calc_risk() {
+        var priority = Number(get_value('pri'));
+        var q1 = Number(get_value('q1'));
+        var q2 = Number(get_value('q2'));
+        var q3 = Number(get_value('q3'));
+        var q4 = Number(get_value('q4'));
+        var q5 = Number(get_value('q5'));
+        var q6 = Number(get_value('q6'));
+        var sum = q1 + q2 + q3 + q4 + q5 + q6;
 
-		var low = "The risk of this change is standard.";
-		var med = "The risk of this change ranges between standard and significant.";
-		var high = "The risk of this change is significant.";
-		
-		if (isNaN(sum) || isNaN(priority)) {
-			return "Please make sure all questions are answered before calculating risk.";
-		
-		} else if (sum <= 2) {
-			return low;
+        var lowstr = "The risk of this change is standard.";
+        var low = lowstr.fontcolor("green");
 
-		} else if (sum <= 4) {
-			if (priority == 1) {
-				return high;	
-			
-			} else if (priority == 2) {
-				return med;
+        var medstr = "The risk of this change ranges between standard and significant.";
+        var med = medstr.fontcolor("c34500");
 
-			} else {
-				return low;}
+        var highstr = "The risk of this change is significant.";
+        var high = highstr.fontcolor("red");
 
-		} else {
-			if (priority <= 2) {
-				return high;
-			
-			} else {
-				return low;}
-		}
-	}
-	/** Function: output_result
-			This function is used to call calc_risk, and displays the return value in
-			the html code as text.
-	**/
-	function output_result() {
-		document.getElementById("output").innerHTML = calc_risk();
-	}
+        if (isNaN(sum) || isNaN(priority)) {
+            return "Please make sure all questions are answered before calculating risk.".fontcolor("black");
+        
+        } else if (sum <= 2) {
+            return low;
+
+        } else if (sum <= 4) {
+            if (priority == 1) {
+                return high;    
+            
+            } else if (priority == 2) {
+                return med;
+
+            } else {
+                return low;}
+
+        } else {	
+            if (priority <= 2) {
+                return high;
+            
+            } else {
+                return low;}
+        }
+    }
+    /** Function: output_result
+            This function is used to call calc_risk, and displays the return value in
+            the html code as text.
+    **/
+    function output_result() {
+        document.getElementById("output").innerHTML = calc_risk();
+    }
 
 </script>
 
 <noscript>This page requires Javascript. Please enable Javascript or calculate your risk
-	manually using <a href='http://is.oregonstate.edu/files/projects/change-management-policy.pdf' target="_blank">
-	this PDF.</a></noscript>
+    manually using <a href="http://is.oregonstate.edu/files/projects/change-management-policy.pdf" target="_blank">
+    this PDF.</a></noscript>
 
+</div>
 </body>
 </html>
