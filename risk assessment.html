@@ -5,29 +5,29 @@
 
 <form action="#">
 
-<noscript>This page requires Javascript. Please enable Javascript or calculate your risk
+<noscript><p>This page requires Javascript. Please enable Javascript or calculate your risk
     manually using <a href="http://is.oregonstate.edu/files/projects/change-management-policy.pdf" target="_blank">
-    this PDF.</a><p></noscript>
+    this PDF.</a></p></noscript>
 
 Use this tool to calculate risk, or something along those lines.<p>
 
 <h3>Priority of Service</h3>
     <div class="priority">
-        <input type="radio" name="pri" id="p1" value="1" required>
+        <p><input type="radio" name="pri" id="p1" value="1" required>
         <label for="p1">Priority 1</label>
-        - Crosses organizational boundaries, serving the business functionality of many units. Is critical to the ability of the University to meet its business and regulatory obligations, support the delivery of education, or administer research. Has strategic value to the campus such that encouragement of widespread use is desirable. <p>
+        - Crosses organizational boundaries, serving the business functionality of many units. Is critical to the ability of the University to meet its business and regulatory obligations, support the delivery of education, or administer research. Has strategic value to the campus such that encouragement of widespread use is desirable. </p>
     </div>    
     
     <div class="priority">
-        <input type="radio" name="pri" id="p2" value="2" required>
+        <p><input type="radio" name="pri" id="p2" value="2" required>
         <label for="p2">Priority 2</label> 
-        - The system is a feeder to Priority 1 systems; or is a system that does not cross organizational boundaries, but is still critical to the ability of the University to meet its business and regulatory obligations. <p>
+        - The system is a feeder to Priority 1 systems; or is a system that does not cross organizational boundaries, but is still critical to the ability of the University to meet its business and regulatory obligations. </p>
     </div>    
     
     <div class="priority">
-        <input type="radio" name="pri" id="p3" value="3" required>
+        <p><input type="radio" name="pri" id="p3" value="3" required>
         <label for="p3">Priority 3</label> 
-        - Any departmental system that supports the internal operations of any department or departmental function and does not cross organizational boundaries. <p>
+        - Any departmental system that supports the internal operations of any department or departmental function and does not cross organizational boundaries. </p>
     </div>
 
 <h3>Assurance Calculation</h3>
@@ -37,54 +37,54 @@ Use this tool to calculate risk, or something along those lines.<p>
             <label for="q1y"> Yes</label><br>
             
             <input type="radio" name="q1" id="q1n" value="0" required>
-            <label for="q1n"> No</label><br>
+            <label for="q1n"> No</label><br></p>
     </div>
 
     <div class="question">
-        <p><h5>Is the change simple to make?</h5><p>
-            <input type="radio" name="q2" id="q2y" value="1" required>
+        <p><h5>Is the change simple to make?</h5></p>
+            <p><input type="radio" name="q2" id="q2y" value="1" required>
             <label for="q2y"> Yes</label><br>
             
             <input type="radio" name="q2" id="q2n" value="0" required>
-            <label for="q2n"> No</label><br>
+            <label for="q2n"> No</label><br></p>
     </div>
     
     <div class="question">
-        <p><h5>Do we have a clear understanding of everything the change will do?</h5><p>
-            <input type="radio" name="q3" id="q3y" value="1" required>
+        <p><h5>Do we have a clear understanding of everything the change will do?</h5></p>
+            <p><input type="radio" name="q3" id="q3y" value="1" required>
             <label for="q3y"> Yes</label><br>
             
             <input type="radio" name="q3" id="q3n" value="0" required>
-            <label for="q3n"> No</label><br>
+            <label for="q3n"> No</label><br></p>
     </div>        
 
 <h3>Impact Calculation</h3>
     
     <div class="question">
-        <h5>Will this change be noticeable to customers?</h5><p>
-            <input type="radio" name="q4" id="q4y" value="1" required>
+        <p><h5>Will this change be noticeable to customers?</h5></p>
+            <p><input type="radio" name="q4" id="q4y" value="1" required>
             <label for="q4y"> Yes</label><br>
 
             <input type="radio" name="q4" id="q4n" value="0" required>
-            <label for="q4n"> No</label><br>
+            <label for="q4n"> No</label><br></p>
     </div>
 
     <div class="question">
-        <p><h5>Could this change impact other services?</h5><p>
-            <input type="radio" name="q5" id="q5y" value="1" required>
+        <p><h5>Could this change impact other services?</h5></p>
+            <p><input type="radio" name="q5" id="q5y" value="1" required>
             <label for="q5y"> Yes</label><br>
 
             <input type="radio" name="q5" id="q5n" value="0" required>
-            <label for="q5n"> No</label><br>
+            <label for="q5n"> No</label><br></p>
     </div>
 
     <div class="question">
-        <p><h5>Could this change result in an extended service interruption if it goes badly?</h5><p>
-            <input type="radio" name="q6" id="q6y" value="1" required>
+        <p><h5>Could this change result in an extended service interruption if it goes badly?</h5></p>
+            <p><input type="radio" name="q6" id="q6y" value="1" required>
             <label for="q6y"> Yes</label><br>
 
             <input type="radio" name="q6" id="q6n" value="0" required>
-            <label for="q6n"> No</label><p>
+            <label for="q6n"> No</label></p>
     </div>
 
 </form>
@@ -136,26 +136,29 @@ Use this tool to calculate risk, or something along those lines.<p>
 
         if (isNaN(sum) || isNaN(priority)) {
             return "Please make sure all questions are answered before calculating risk.".fontcolor("black");
-        
-        } else if (sum <= 2) {
+        } 
+        else if (sum <= 2) {
             return low;
-
-        } else if (sum <= 4) {
+        } 
+        else if (sum <= 4) {
             if (priority == 1) {
                 return high;    
-            
-            } else if (priority == 2) {
+            } 
+            else if (priority == 2) {
                 return med;
-
-            } else {
-                return low;}
-
-        } else {	
+            } 
+            else {
+                return low;
+            }
+        } 
+        else {	
             if (priority <= 2) {
                 return high;
             
-            } else {
-                return low;}
+            } 
+            else {
+                return low;
+            }
         }
     }
     /** Function: output_result
